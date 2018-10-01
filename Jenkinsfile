@@ -1,4 +1,4 @@
-def CONTAINER_NAME="jenkins-pipeline"
+def CONTAINER_NAME="springboot-docker-jenkins"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="panyaxbo"
 def HTTP_PORT="8090"
@@ -16,7 +16,7 @@ node {
     }
 
     stage('Build'){
-        sh "mvn clean install"
+        sh "mvn clean install -e -X"
     }
 
     stage('Sonar'){
