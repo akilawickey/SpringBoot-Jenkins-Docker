@@ -18,12 +18,7 @@ node {
     stage('Build'){
         sh "mvn clean install -e -X"
     }
-
-
-    stage("Image Prune"){
-        imagePrune(CONTAINER_NAME)
-    }
-
+o
     stage('Image Build'){
         imageBuild(CONTAINER_NAME, CONTAINER_TAG)
     }
