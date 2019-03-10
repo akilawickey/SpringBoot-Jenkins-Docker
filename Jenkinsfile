@@ -1,4 +1,4 @@
-def CONTAINER_NAME="springboot-docker-jenkins"
+def CONTAINER_NAME="jenkins-pipeline"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="asak999@gmail.com"
 def HTTP_PORT="8090"
