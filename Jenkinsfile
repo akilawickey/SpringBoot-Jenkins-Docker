@@ -1,6 +1,6 @@
 def CONTAINER_NAME="springboot-docker-jenkins"
 def CONTAINER_TAG="latest"
-def DOCKER_HUB_USER="asak999@gmail.com"
+def DOCKER_HUB_USER="akilawickey"
 def HTTP_PORT="8090"
 
 node {
