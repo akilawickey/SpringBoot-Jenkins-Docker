@@ -21,23 +21,23 @@ node {
         sh "mvn clean install -e -X"
     }
 
-    stage("Image Prune"){
-        imagePrune(CONTAINER_NAME)
-    }
+  //  stage("Image Prune"){
+   //     imagePrune(CONTAINER_NAME)
+   // }
 
-    stage('Image Build'){
-        imageBuild(CONTAINER_NAME, CONTAINER_TAG)
-    }
+    //stage('Image Build'){
+    //    imageBuild(CONTAINER_NAME, CONTAINER_TAG)
+    //}
 
-    stage('Push to Docker Registry'){
-        withCredentials([usernamePassword(credentialsId: 'dockerHubAccount', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-            pushToImage(CONTAINER_NAME, CONTAINER_TAG, USERNAME, PASSWORD)
-        }
-    }
+    //stage('Push to Docker Registry'){
+     //   withCredentials([usernamePassword(credentialsId: 'dockerHubAccount', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+      //      pushToImage(CONTAINER_NAME, CONTAINER_TAG, USERNAME, PASSWORD)
+     //  }
+    //}
 
-    stage('Run App'){
-        runApp(CONTAINER_NAME, CONTAINER_TAG, DOCKER_HUB_USER, HTTP_PORT)
-    }
+    //stage('Run App'){
+     //   runApp(CONTAINER_NAME, CONTAINER_TAG, DOCKER_HUB_USER, HTTP_PORT)
+    //}
 
 }
 
