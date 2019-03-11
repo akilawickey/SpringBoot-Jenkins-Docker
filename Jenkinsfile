@@ -28,7 +28,7 @@ node {
     stage('Image Build'){
         sh 'ls'
         sh 'pwd'
-        sh "docker build -t $containerName:$tag  -t $containerName --pull --no-cache ."
+        sh "docker build -t jenkins-pipeline:latest ."
         echo "Image build complete"
         
         //imageBuild(CONTAINER_NAME, CONTAINER_TAG)
