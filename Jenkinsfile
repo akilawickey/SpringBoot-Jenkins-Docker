@@ -28,7 +28,10 @@ node {
     stage('Image Build'){
         sh 'ls'
         sh 'pwd'
-        imageBuild(CONTAINER_NAME, CONTAINER_TAG)
+        sh "docker build -t $containerName:$tag  -t $containerName --pull --no-cache ."
+        echo "Image build complete"
+        
+        //imageBuild(CONTAINER_NAME, CONTAINER_TAG)
     }
 
     //stage('Push to Docker Registry'){
